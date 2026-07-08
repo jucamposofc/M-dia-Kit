@@ -1,0 +1,470 @@
+/* Configurações de Cores e Variáveis - Estilo Tech Minimalista */
+:root {
+    --bg-main: #080B11;
+    --bg-surface: #131926;
+    --bg-card-glow: linear-gradient(180deg, #182235 0%, #131926 100%);
+    --accent-color: #00F2FE;
+    --accent-gradient: linear-gradient(135deg, #00F2FE 0%, #4FACFE 100%);
+    --tiktok-pink: #FE2C55;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --border-color: rgba(255, 255, 255, 0.06);
+    --font-sans: 'Inter', sans-serif;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset Padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* Elementos de Interface / Botões */
+.btn-primary {
+    background: var(--accent-gradient);
+    color: #000;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 242, 254, 0.2);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: var(--text-secondary);
+}
+
+/* Navbar */
+.navbar {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(8, 11, 17, 0.85);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.nav-socials {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--tiktok-pink);
+}
+
+/* Hero Section */
+.hero {
+    padding: 120px 0 90px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.badge {
+    background: rgba(0, 242, 254, 0.08);
+    color: var(--accent-color);
+    border: 1px solid rgba(0, 242, 254, 0.15);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 28px;
+    letter-spacing: 0.5px;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 24px;
+    letter-spacing: -1.5px;
+}
+
+.hero h1 strong {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.hero p strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+/* Títulos das Seções */
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 48px;
+    letter-spacing: -0.5px;
+}
+
+/* Grid de Métricas Gerais */
+.metrics {
+    padding: 80px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.metric-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    padding: 36px 24px;
+    border-radius: 12px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.metric-card:hover {
+    border-color: rgba(0, 242, 254, 0.3);
+    transform: translateY(-4px);
+}
+
+.metric-card h3 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+    letter-spacing: -1px;
+}
+
+.metric-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.metrics-subtext {
+    text-align: center;
+    margin-top: 32px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Resultados Reais (Destaques de Vídeos) */
+.results {
+    padding: 80px 0;
+    border-top: 1px solid var(--border-color);
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 242, 254, 0.02) 100%);
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.result-card {
+    background: var(--bg-card-glow);
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    border-radius: 16px;
+    position: relative;
+    transition: var(--transition);
+}
+
+.result-card:hover {
+    border-color: rgba(254, 44, 85, 0.3); /* Destaque sutil rosa TikTok */
+}
+
+.video-badge {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--tiktok-pink);
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.result-card h4 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    line-height: 1;
+}
+
+.result-card h4 span {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    display: block;
+    margin-top: 4px;
+}
+
+.video-stats {
+    display: flex;
+    gap: 20px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 16px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Público-Alvo */
+.audience {
+    padding: 80px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.audience-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    padding: 32px;
+    border-radius: 12px;
+}
+
+.audience-card h5 {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.audience-card .highlight {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.audience-card .highlight span {
+    font-size: 1rem;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-left: 4px;
+}
+
+.audience-card .sub {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Serviços & Formatos Layout Duplo */
+.services {
+    padding: 80px 0;
+    border-top: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 48px;
+}
+
+.subsection-title {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    font-weight: 700;
+    border-left: 3px solid var(--accent-color);
+    padding-left: 12px;
+}
+
+.custom-list {
+    list-style: none;
+}
+
+.custom-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    color: var(--text-secondary);
+}
+
+/* Marcas */
+.brands {
+    padding: 80px 0;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.brands-placeholder {
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px dashed var(--border-color);
+    border-radius: 12px;
+    color: var(--text-secondary);
+}
+
+/* CTA & Informações de Contato */
+.cta {
+    padding: 100px 0;
+    border-top: 1px solid var(--border-color);
+    background: radial-gradient(circle at top, rgba(0, 242, 254, 0.05) 0%, transparent 65%);
+}
+
+.cta-container {
+    text-align: center;
+    max-width: 650px;
+}
+
+.cta h2 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+}
+
+.cta p {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+.contact-info {
+    margin-bottom: 32px;
+    font-weight: 600;
+}
+
+.contact-info p {
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.btn-primary.large {
+    padding: 14px 36px;
+    font-size: 1.05rem;
+}
+
+/* Rodapé */
+footer {
+    padding: 40px 0;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsividade Completa (Mobile) */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+    .hero p {
+        font-size: 1.1rem;
+    }
+    .hero-actions {
+        flex-direction: column;
+    }
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
